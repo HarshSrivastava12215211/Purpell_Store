@@ -116,4 +116,7 @@ For retail analytics, tracking individuals across a single camera view is critic
 3. **Tracking**: We calculate the Euclidean distance between the centroids of existing tracks and new detections. 
 4. **Hungarian Algorithm**: SciPy minimizes the total spatial distance across all assignments. If a centroid moves less than the max-distance threshold between frames, it is assigned the same tracking ID.
 
+5. **Zone Assignment (ROI)**: Once a person's centroid is calculated, we check if those (cx, cy) coordinates fall inside any of the custom ROI bounding boxes [x1, y1, x2, y2] defined in your store_layout.json. This instantly tells us which zone the person is standing in! 
+
 This approach is highly lightweight and works perfectly for standard 15fps CCTV footage, eliminating the need for complex, computationally heavy DeepSORT/Kalman filter logic.
+
