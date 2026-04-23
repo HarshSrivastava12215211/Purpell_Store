@@ -1,0 +1,198 @@
+﻿{
+  "STORE_PURPLLE_001": {
+    "city": "Mumbai",
+    "open_hours": "10:00-22:00",
+    "cameras": [
+      {
+        "camera_id": "CAM_1",
+        "coverage": "SKINCARE_SECTION",
+        "type": "floor",
+        "resolution": [
+          1366,
+          768
+        ]
+      },
+      {
+        "camera_id": "CAM_2",
+        "coverage": "MAKEUP_SECTION",
+        "type": "floor",
+        "resolution": [
+          1366,
+          768
+        ]
+      },
+      {
+        "camera_id": "CAM_3",
+        "coverage": "ENTRY_THRESHOLD",
+        "type": "entry",
+        "resolution": [
+          1366,
+          768
+        ]
+      },
+      {
+        "camera_id": "CAM_4",
+        "coverage": "STOCKROOM",
+        "type": "staff",
+        "resolution": [
+          1366,
+          768
+        ]
+      },
+      {
+        "camera_id": "CAM_5",
+        "coverage": "BILLING_AREA",
+        "type": "billing",
+        "resolution": [
+          1366,
+          768
+        ]
+      }
+    ],
+    "zones": [
+      {
+        "zone_id": "ENTRY",
+        "sku_zone": "ACCESS",
+        "camera_id": "CAM_3",
+        "roi": [
+          700,
+          120,
+          1280,
+          720
+        ]
+      },
+      {
+        "zone_id": "DOOR_MAT",
+        "sku_zone": "ENTRY_BUFFER",
+        "camera_id": "CAM_3",
+        "roi": [
+          760,
+          220,
+          1040,
+          520
+        ]
+      },
+      {
+        "zone_id": "SKINCARE",
+        "sku_zone": "MOISTURISER_SERUM",
+        "camera_id": "CAM_1",
+        "roi": [
+          0,
+          80,
+          900,
+          500
+        ]
+      },
+      {
+        "zone_id": "CENTER_DISPLAY",
+        "sku_zone": "PROMOTIONAL_ITEMS",
+        "camera_id": "CAM_1",
+        "roi": [
+          380,
+          470,
+          930,
+          760
+        ]
+      },
+      {
+        "zone_id": "AISLE_RIGHT",
+        "sku_zone": "BROWSING",
+        "camera_id": "CAM_1",
+        "roi": [
+          930,
+          120,
+          1366,
+          720
+        ]
+      },
+      {
+        "zone_id": "MAKEUP",
+        "sku_zone": "LIPSTICK_FOUNDATION",
+        "camera_id": "CAM_2",
+        "roi": [
+          420,
+          100,
+          1366,
+          620
+        ]
+      },
+      {
+        "zone_id": "CENTER_AISLE",
+        "sku_zone": "BROWSING",
+        "camera_id": "CAM_2",
+        "roi": [
+          250,
+          430,
+          980,
+          760
+        ]
+      },
+      {
+        "zone_id": "LEFT_DISPLAY",
+        "sku_zone": "PROMOTIONAL_ITEMS",
+        "camera_id": "CAM_2",
+        "roi": [
+          0,
+          220,
+          380,
+          720
+        ]
+      },
+      {
+        "zone_id": "BILLING",
+        "sku_zone": "CHECKOUT",
+        "camera_id": "CAM_5",
+        "roi": [
+          0,
+          120,
+          620,
+          768
+        ]
+      },
+      {
+        "zone_id": "QUEUE_WAIT",
+        "sku_zone": "QUEUE",
+        "camera_id": "CAM_5",
+        "roi": [
+          620,
+          180,
+          1180,
+          768
+        ]
+      },
+      {
+        "zone_id": "BACK_PASSAGE",
+        "sku_zone": "STAFF_MOVEMENT",
+        "camera_id": "CAM_5",
+        "roi": [
+          900,
+          0,
+          1366,
+          260
+        ]
+      },
+      {
+        "zone_id": "STOCKROOM",
+        "sku_zone": "INVENTORY",
+        "camera_id": "CAM_4",
+        "roi": [
+          0,
+          0,
+          1366,
+          768
+        ]
+      }
+    ],
+    "entry_rules": {
+      "camera_id": "CAM_3",
+      "cross_line": [
+        860,
+        120,
+        860,
+        720
+      ],
+      "entry_direction": "right_to_left",
+      "exit_direction": "left_to_right"
+    }
+  }
+}
