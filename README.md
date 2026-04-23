@@ -1,5 +1,7 @@
 # Purpell Store (End-to-End)
 
+![Purpell Store Dashboard](docs/dashboard.png)
+
 A production-grade, containerized Purpell Store system that processes raw CCTV footage through YOLOv8 person detection, emits structured behavioral events, and serves live retail analytics via a REST API with real-time dashboard.
 
 ## What this project includes
