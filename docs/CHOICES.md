@@ -120,3 +120,16 @@ For retail analytics, tracking individuals across a single camera view is critic
 
 This approach is highly lightweight and works perfectly for standard 15fps CCTV footage, eliminating the need for complex, computationally heavy DeepSORT/Kalman filter logic.
 
+
+## 6) Conversion Ratio Estimation
+
+Initially, the project specification included calculating a store-wide Conversion Ratio. However, due to the unavailability of the required pos_transactions.csv file (Point-of-Sale data), exact conversion correlation was mathematically impossible to calculate with high confidence.
+
+**Future Calculation Method**:
+If POS transaction data becomes available in the future, the Conversion Ratio can be calculated by:
+1. Counting the total number of unique visitors detected by the ENTRY_THRESHOLD camera.
+2. Counting the total number of unique purchase transactions in the POS feed for the identical time window.
+3. Ratio = (Total Transactions / Total Unique Visitors) * 100
+
+**Current Heuristic Estimation (CV Only)**:
+In the absence of external transaction data, we can estimate purchases purely through computer vision behavior logic. If a tracked person's centroid is registered inside the BILLING zone (the checkout counter) and their continuous dwell time in that specific zone exceeds **5 minutes**, we can confidently infer that a transaction occurred. We can treat these long-dwell billing events as surrogate "Purchases" to calculate an estimated conversion funnel without needing external CSV files.

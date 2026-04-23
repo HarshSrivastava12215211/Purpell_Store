@@ -159,7 +159,6 @@ store-intelligence/
  data/
     sample/
         store_layout.json
-        pos_transactions.csv
         sample_events.jsonl
  docs/
     DESIGN.md          # Architecture + AI-assisted decisions

@@ -92,23 +92,7 @@ class Storage:
                 else:
                     duplicates += 1
         return inserted, duplicates
-        with self._txn() as conn:
-            for row in rows:
-                cursor = conn.execute(
-                    """
-                    INSERT OR IGNORE INTO pos_transactions (transaction_id, store_id, timestamp, basket_value_inr)
-                    VALUES (?, ?, ?, ?)
-                    """,
-                    (
-                        row["transaction_id"],
-                        row["store_id"],
-                        row["timestamp"].isoformat(),
-                        row["basket_value_inr"],
-                    ),
-                )
-                if cursor.rowcount == 1:
-                    inserted += 1
-        return inserted
+
 
     def fetch_events(
         self, store_id: str, start: datetime | None = None, end: datetime | None = None
