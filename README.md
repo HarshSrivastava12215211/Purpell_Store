@@ -86,6 +86,20 @@ python -m pipeline.detect \
 
 All metric endpoints accept an optional `?as_of=<ISO-8601>` parameter to query a specific time window.
 
+### Interactive API Documentation
+
+FastAPI automatically generates live, interactive documentation for testing the endpoints directly from your browser.
+- **Swagger UI**: `http://localhost:8000/docs`
+- **ReDoc**: `http://localhost:8000/redoc`
+
+### System Health Monitoring
+
+The `/health` endpoint acts as the heartbeat of the application, designed for integration with uptime monitoring systems:
+- Verifies SQLite database connectivity.
+- Tracks the `last_event_time` for all active retail stores.
+- Automatically flags a `STALE_FEED` warning if a camera pipeline stops sending data for more than 10 minutes.
+- Natively integrated as the Docker container `HEALTHCHECK` in `docker-compose.yml`.
+
 ## Live dashboard (Part E)
 
 ### Web dashboard (recommended)
