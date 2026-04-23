@@ -107,9 +107,10 @@ python -m dashboard.live_dashboard --store-id STORE_PURPLLE_001 --as-of 2026-03-
 ## Testing and coverage
 
 ```bash
-pytest
+pytest --cov=app --cov=pipeline
 ```
 
+**Current Test Coverage**: 70.53%
 Coverage gate is configured in `pytest.ini` (`--cov-fail-under=70`).
 
 ## Operational notes
