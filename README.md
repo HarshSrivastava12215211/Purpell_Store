@@ -15,7 +15,7 @@ A production-grade, containerized Purpell Store system that processes raw CCTV f
 ## Quickstart in 5 commands
 
 ```bash
-git clone https://github.com/Anshgulati090/purple_assignment
+git clone https://github.com/HarshSrivastava12215211/Purpell_Store.git
 cd store-intelligence
 python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements-dev.txt
